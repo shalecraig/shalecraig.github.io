@@ -10,11 +10,9 @@ From time to time, I like to play around with a new programming languages.
 
 I've designed a few generic exercises for experienced programmers to give them a feel on how these languages work.
 
-Expect this list to bring you from `hello world` to marginal comfort, in the span of about four hours.
+You'll walk away having implemented a Genetic Algorithm in this language - all in the span of about four hours.
 
-Because it's generic, it's definitely not comprehensive.
-
-### Programs: ###
+### Exercises: ###
 
 1. 'Hello World' - the archetypal program that starts it all.
 	Since code examples can typically be found online, this is just to ensure the environment is setup correctly.
