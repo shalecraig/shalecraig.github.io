@@ -11,3 +11,5 @@ github_username:  shalecraig
 
 # Build settings
 markdown: kramdown
+
+exclude: ['Gemfile', 'Gemfile.lock']
