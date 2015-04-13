@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="post">
+
+    <div class="cinemagraph-content">
+      <video autoplay loop>
+        <source src="/assets/waving_reeds_cinemagraph.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
