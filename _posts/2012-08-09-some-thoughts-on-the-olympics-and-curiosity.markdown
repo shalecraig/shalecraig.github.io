@@ -9,10 +9,10 @@ categories:
 
 NASA didn't delay the Curiosity landing because they realized that the world doesn't live for Primetime.
 
-```
+~~~
 Total cost of Curiosity:                           2.5 Billion USD [1]
 Total cost to London for the 2012 Olympics:        14.5 Billion USD [2]
-```
+~~~
 
 America's spending budget for the Curiosity rover is approximately one sixth of what London has spent on the entire Olympics.
 
