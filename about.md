@@ -4,8 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Shale is a Software Engineer.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+He likes riding his bicycle, and tapping keys on his keyboard.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+From time-to-time, you'll see him hanging out in MC, DC, or E5.
+Hopefully that'll happen a lot less after he graduates.
+
+You can find the source code for this website at [github.com/shalecraig/shalecraig.github.io](https://github.com/shalecraig/shalecraig.github.io).
