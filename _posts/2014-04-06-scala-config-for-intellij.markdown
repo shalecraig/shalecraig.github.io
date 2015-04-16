@@ -21,4 +21,4 @@ To use with IntelliJ, set the Scala home to:
   /usr/local/opt/scala/idea
 ~~~
 
-I was surprised, but figured I'd post it.
+I was surprised, and figured I'd post it.
