@@ -13,3 +13,6 @@ github_username:  shalecraig
 markdown: kramdown
 
 exclude: ['Gemfile', 'Gemfile.lock']
+
+gems:
+  - jemoji
