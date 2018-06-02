@@ -13,5 +13,5 @@ markdown: kramdown
 
 exclude: ['Gemfile', 'Gemfile.lock']
 
-gems:
+plugins:
   - jemoji
