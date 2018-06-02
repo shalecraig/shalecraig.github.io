@@ -2,8 +2,7 @@
 title: Rock Solid Engineering
 # email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Long form tweets penned by Shale Craig, a University of Waterloo
-  Software Engineering student.
+  Long form twetes by Shale. University of Waterloo grad, now at Stripe.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://shalecraig.github.io" # the base hostname & protocol for your site
 twitter_username: __shale__
