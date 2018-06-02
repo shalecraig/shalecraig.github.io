@@ -4,6 +4,7 @@ title: "A different aproach to success"
 date: 2013-01-13 20:37
 comments: true
 categories:
+visible: 1
 ---
 
 My girlfriend has this tradition of writing New-Years resolutions. There is a merit to introspectively correcting your perceived shortcomings, but nothing is more humbling than writing them with someone else. As an added benefit, it keeps you honest.

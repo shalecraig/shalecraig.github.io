@@ -10,7 +10,7 @@ If you want to hang out, feel free to send me a message.
 
 I'll be in these places on these dates:
 
-* May 1: [redacted]✈LHR
+* May 1: home ✈ LHR
 * May 2: London, UK -> Ashford, UK
 * May 3: Ashford, UK -> Dunkirk, France
 * May 4: Dunkirk, France -> Bruges, Belgium
@@ -31,4 +31,4 @@ I'll be in these places on these dates:
 * May 20, 21: Berlin
 * May 22-28: Unscheduled. Suggest something?
 * May 30(evening): London
-* May 31: LHR✈[redacted]
+* May 31: LHR ✈ home

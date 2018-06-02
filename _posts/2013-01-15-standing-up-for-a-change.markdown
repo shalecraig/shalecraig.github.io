@@ -4,6 +4,7 @@ title: "Standing Up For a Change"
 date: 2013-01-15 16:44
 comments: true
 categories:
+visible: 1
 ---
 
 Hello, you look familiar.
