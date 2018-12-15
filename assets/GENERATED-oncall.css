@@ -1,0 +1,454 @@
+.sample-schedule .oncall-a-to-b {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #7795f8,
+      #7795f8 50%,
+      #45b2e8 50%
+    );
+}
+
+.sample-schedule .oncall-a-to-c {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #7795f8,
+      #7795f8 50%,
+      #3ecf8e 50%
+    );
+}
+
+.sample-schedule .oncall-a-to-d {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #7795f8,
+      #7795f8 50%,
+      #d782d9 50%
+    );
+}
+
+.sample-schedule .oncall-a-to-e {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #7795f8,
+      #7795f8 50%,
+      #f79a59 50%
+    );
+}
+
+.sample-schedule .oncall-a-to-f {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #7795f8,
+      #7795f8 50%,
+      #fa755a 50%
+    );
+}
+
+.sample-schedule .oncall-a-to-g {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #7795f8,
+      #7795f8 50%,
+      #a78ce9 50%
+    );
+}
+
+.sample-schedule .oncall-a {
+  background-color: #7795f8;
+  color: #7795f8;
+}
+
+.sample-schedule .oncall-b-to-a {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #45b2e8,
+      #45b2e8 50%,
+      #7795f8 50%
+    );
+}
+
+.sample-schedule .oncall-b-to-c {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #45b2e8,
+      #45b2e8 50%,
+      #3ecf8e 50%
+    );
+}
+
+.sample-schedule .oncall-b-to-d {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #45b2e8,
+      #45b2e8 50%,
+      #d782d9 50%
+    );
+}
+
+.sample-schedule .oncall-b-to-e {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #45b2e8,
+      #45b2e8 50%,
+      #f79a59 50%
+    );
+}
+
+.sample-schedule .oncall-b-to-f {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #45b2e8,
+      #45b2e8 50%,
+      #fa755a 50%
+    );
+}
+
+.sample-schedule .oncall-b-to-g {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #45b2e8,
+      #45b2e8 50%,
+      #a78ce9 50%
+    );
+}
+
+.sample-schedule .oncall-b {
+  background-color: #45b2e8;
+  color: #45b2e8;
+}
+
+.sample-schedule .oncall-c-to-a {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #3ecf8e,
+      #3ecf8e 50%,
+      #7795f8 50%
+    );
+}
+
+.sample-schedule .oncall-c-to-b {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #3ecf8e,
+      #3ecf8e 50%,
+      #45b2e8 50%
+    );
+}
+
+.sample-schedule .oncall-c-to-d {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #3ecf8e,
+      #3ecf8e 50%,
+      #d782d9 50%
+    );
+}
+
+.sample-schedule .oncall-c-to-e {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #3ecf8e,
+      #3ecf8e 50%,
+      #f79a59 50%
+    );
+}
+
+.sample-schedule .oncall-c-to-f {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #3ecf8e,
+      #3ecf8e 50%,
+      #fa755a 50%
+    );
+}
+
+.sample-schedule .oncall-c-to-g {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #3ecf8e,
+      #3ecf8e 50%,
+      #a78ce9 50%
+    );
+}
+
+.sample-schedule .oncall-c {
+  background-color: #3ecf8e;
+  color: #3ecf8e;
+}
+
+.sample-schedule .oncall-d-to-a {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #d782d9,
+      #d782d9 50%,
+      #7795f8 50%
+    );
+}
+
+.sample-schedule .oncall-d-to-b {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #d782d9,
+      #d782d9 50%,
+      #45b2e8 50%
+    );
+}
+
+.sample-schedule .oncall-d-to-c {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #d782d9,
+      #d782d9 50%,
+      #3ecf8e 50%
+    );
+}
+
+.sample-schedule .oncall-d-to-e {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #d782d9,
+      #d782d9 50%,
+      #f79a59 50%
+    );
+}
+
+.sample-schedule .oncall-d-to-f {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #d782d9,
+      #d782d9 50%,
+      #fa755a 50%
+    );
+}
+
+.sample-schedule .oncall-d-to-g {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #d782d9,
+      #d782d9 50%,
+      #a78ce9 50%
+    );
+}
+
+.sample-schedule .oncall-d {
+  background-color: #d782d9;
+  color: #d782d9;
+}
+
+.sample-schedule .oncall-e-to-a {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #f79a59,
+      #f79a59 50%,
+      #7795f8 50%
+    );
+}
+
+.sample-schedule .oncall-e-to-b {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #f79a59,
+      #f79a59 50%,
+      #45b2e8 50%
+    );
+}
+
+.sample-schedule .oncall-e-to-c {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #f79a59,
+      #f79a59 50%,
+      #3ecf8e 50%
+    );
+}
+
+.sample-schedule .oncall-e-to-d {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #f79a59,
+      #f79a59 50%,
+      #d782d9 50%
+    );
+}
+
+.sample-schedule .oncall-e-to-f {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #f79a59,
+      #f79a59 50%,
+      #fa755a 50%
+    );
+}
+
+.sample-schedule .oncall-e-to-g {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #f79a59,
+      #f79a59 50%,
+      #a78ce9 50%
+    );
+}
+
+.sample-schedule .oncall-e {
+  background-color: #f79a59;
+  color: #f79a59;
+}
+
+.sample-schedule .oncall-f-to-a {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #fa755a,
+      #fa755a 50%,
+      #7795f8 50%
+    );
+}
+
+.sample-schedule .oncall-f-to-b {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #fa755a,
+      #fa755a 50%,
+      #45b2e8 50%
+    );
+}
+
+.sample-schedule .oncall-f-to-c {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #fa755a,
+      #fa755a 50%,
+      #3ecf8e 50%
+    );
+}
+
+.sample-schedule .oncall-f-to-d {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #fa755a,
+      #fa755a 50%,
+      #d782d9 50%
+    );
+}
+
+.sample-schedule .oncall-f-to-e {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #fa755a,
+      #fa755a 50%,
+      #f79a59 50%
+    );
+}
+
+.sample-schedule .oncall-f-to-g {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #fa755a,
+      #fa755a 50%,
+      #a78ce9 50%
+    );
+}
+
+.sample-schedule .oncall-f {
+  background-color: #fa755a;
+  color: #fa755a;
+}
+
+.sample-schedule .oncall-g-to-a {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #a78ce9,
+      #a78ce9 50%,
+      #7795f8 50%
+    );
+}
+
+.sample-schedule .oncall-g-to-b {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #a78ce9,
+      #a78ce9 50%,
+      #45b2e8 50%
+    );
+}
+
+.sample-schedule .oncall-g-to-c {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #a78ce9,
+      #a78ce9 50%,
+      #3ecf8e 50%
+    );
+}
+
+.sample-schedule .oncall-g-to-d {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #a78ce9,
+      #a78ce9 50%,
+      #d782d9 50%
+    );
+}
+
+.sample-schedule .oncall-g-to-e {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #a78ce9,
+      #a78ce9 50%,
+      #f79a59 50%
+    );
+}
+
+.sample-schedule .oncall-g-to-f {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #a78ce9,
+      #a78ce9 50%,
+      #fa755a 50%
+    );
+}
+
+.sample-schedule .oncall-g {
+  background-color: #a78ce9;
+  color: #a78ce9;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2018-12-15-on-call/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2015-06-18-valedictorian/</loc>
+    <lastmod>2015-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2015-05-01-eurocycle/</loc>
+    <lastmod>2015-05-01T03:39:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2015-04-19-maven-helper-repo/</loc>
+    <lastmod>2015-04-19T03:39:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2014-04-06-scala-config-for-intellij/</loc>
+    <lastmod>2014-04-06T00:27:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2013-10-25-learning-to-code/</loc>
+    <lastmod>2013-10-25T22:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2013-09-18-hard-questions/</loc>
+    <lastmod>2013-09-18T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2013-09-03-raspberry-pi-as-a-home-base/</loc>
+    <lastmod>2013-09-03T16:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2013-07-14-n-services-i-use-to-offset-google-reader-closure/</loc>
+    <lastmod>2013-07-14T15:55:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/2012-08-09-some-thoughts-on-the-olympics-and-curiosity/</loc>
+    <lastmod>2012-08-09T03:39:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/post/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://shalecraig.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

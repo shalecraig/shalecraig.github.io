@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>On-Call</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  <meta name="description" content="I really liked Henrik&amp;rsquo;s blog post about on-call. Many of the points ring true with my experience over the years.
+I&amp;rsquo;ve learnt something about scheduling on-call shifts over the past 18 months which leads to meaningful improvements work-life balance, and wanted to pass the idea on.
+Long rotations are filled with compromises:
+Compared to smaller time slices, trading a week is inherently harder. Because it&amp;rsquo;s larger amount of time, others are more likely to have conflicts with the week you’re trying to get out of.">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="On-Call">
+    <meta name="twitter:description" content="I really liked Henrik&amp;rsquo;s blog post about on-call. Many of the points ring true with my experience over the years.
+I&amp;rsquo;ve learnt something about scheduling on-call shifts over the past 18 months which leads to meaningful improvements work-life balance, and wanted to pass the idea on.
+Long rotations are filled with compromises:
+Compared to smaller time slices, trading a week is inherently harder. Because it&amp;rsquo;s larger amount of time, others are more likely to have conflicts with the week you’re trying to get out of.">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="On-Call">
+  <meta property="og:description" content="I really liked Henrik&amp;rsquo;s blog post about on-call. Many of the points ring true with my experience over the years.
+I&amp;rsquo;ve learnt something about scheduling on-call shifts over the past 18 months which leads to meaningful improvements work-life balance, and wanted to pass the idea on.
+Long rotations are filled with compromises:
+Compared to smaller time slices, trading a week is inherently harder. Because it&amp;rsquo;s larger amount of time, others are more likely to have conflicts with the week you’re trying to get out of.">
+  <meta property="og:url" content="http://shalecraig.github.io/post/2018-12-15-on-call/">
+  <meta property="og:image" content="/images/avatar.jpg">
+
+
+
+
+<meta name="generator" content="Hugo 0.52">
+
+
+<link rel="canonical" href="http://shalecraig.github.io/post/2018-12-15-on-call/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rock Solid Engineering">
+<meta name="msapplication-tooltip" content="Rock Solid Engineering">
+<meta name='msapplication-navbutton-color' content="#5fbf5e">
+<meta name="msapplication-TileColor" content="#5fbf5e">
+<meta name="msapplication-TileImage" content="/images/tile-image-windows.png">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" sizes="192x192" href="/images/touch-icon-android.png">
+<link rel="apple-touch-icon" href="/images/touch-icon-apple.png">
+
+
+<link rel="preload" href="/styles/main.min.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/avatar.jpg" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/images/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">Rock Solid Engineering</h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">On-Call</h1>
+      <p class="post-meta">@ · Dec 15, 2018 · 3 min read</p>
+    </header>
+    <article class="post-content"><p>I really liked <a href="https://henrikwarne.com/2018/12/03/developer-on-call/">Henrik&rsquo;s blog post</a> about on-call. Many of the points ring true with my experience over the years.</p>
+
+<p>I&rsquo;ve learnt something about scheduling on-call shifts over the past 18 months which leads to meaningful improvements work-life balance, and wanted to pass the idea on.</p>
+
+<p><strong>Long rotations are filled with compromises:</strong></p>
+
+<p>Compared to smaller time slices, trading a week is inherently harder.
+Because it&rsquo;s larger amount of time, others are more likely to have conflicts with the week you’re trying to get out of.
+Sometimes I&rsquo;ll want to go out with friends for someone&rsquo;s birthday, but not on-call.
+Longer rotations mean that I&rsquo;m stuck asking to reschedule an entire week later, rather than just a few days.</p>
+
+<p>Any handoff time overlaps with vacation planning: Wednesday means you can’t take either week off. Friday (or Monday) makes you trade the entire week just for a weekend.</p>
+
+<p><strong>A different schedule:</strong></p>
+
+<p>Where I work, many teams have been following this schedule for a little over a year:</p>
+
+<ul>
+<li>A weekday schedule: Monday at noon until Friday at noon</li>
+<li>A weekend schedule: Friday at noon until Monday at noon</li>
+</ul>
+
+<p>The same people are on both rotations, but it’s configured not to schedule consecutive weekend-then-weekday shifts.</p>
+
+<p><link rel="stylesheet" type="text/css" href="/assets/GENERATED-oncall.css" /></p>
+
+<table class="sample-schedule">
+  <tr>
+    <td width="40px" align="center">Sun</td>
+    <td width="40px" align="center">Mon</td>
+    <td width="40px" align="center">Tue</td>
+    <td width="40px" align="center">Wed</td>
+    <td width="40px" align="center">Thu</td>
+    <td width="40px" align="center">Fri</td>
+    <td width="40px" align="center">Sat</td>
+  </tr>
+  <tr>
+    <td class="oncall-a">&nbsp;</td>
+    <td class="oncall-a-to-b">&nbsp;</td>
+    <td class="oncall-b">&nbsp;</td>
+    <td class="oncall-b">&nbsp;</td>
+    <td class="oncall-b">&nbsp;</td>
+    <td class="oncall-b-to-c">&nbsp;</td>
+    <td class="oncall-c">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="oncall-c">&nbsp;</td>
+    <td class="oncall-c-to-d">&nbsp;</td>
+    <td class="oncall-d">&nbsp;</td>
+    <td class="oncall-d">&nbsp;</td>
+    <td class="oncall-d">&nbsp;</td>
+    <td class="oncall-d-to-e">&nbsp;</td>
+    <td class="oncall-e">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="oncall-e">&nbsp;</td>
+    <td class="oncall-e-to-f">&nbsp;</td>
+    <td class="oncall-f">&nbsp;</td>
+    <td class="oncall-f">&nbsp;</td>
+    <td class="oncall-f">&nbsp;</td>
+    <td class="oncall-f-to-g">&nbsp;</td>
+    <td class="oncall-g">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="oncall-g">&nbsp;</td>
+    <td class="oncall-g-to-a">&nbsp;</td>
+    <td class="oncall-a">&nbsp;</td>
+    <td class="oncall-a">&nbsp;</td>
+    <td class="oncall-a">&nbsp;</td>
+    <td class="oncall-a-to-b">&nbsp;</td>
+    <td class="oncall-b">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="7">...</td>
+  </tr>
+</table>
+
+<p>As an example: I was on-call last weekend. In a few weeks I’m on for a weekday shift.</p>
+
+<p>We’ve found this schedule to be an improvement because:</p>
+
+<ul>
+<li>If you&rsquo;re out of town for the weekend, switching on Monday at Noon allows you to catch an early Monday morning flight with a large margin of error.</li>
+<li>The same exists for Friday afternoon: you can make plans that necessitate leaving early in the day</li>
+<li>Some coworkers with children prefer extra time during weekdays, others prefer going out to party on weekends. With a diverse team, these two kinds of on-call shift can be traded to simplify work-life balance</li>
+</ul>
+
+<p><strong>Setting this up:</strong></p>
+
+<p>If interested, here’s how to configure PagerDuty to make this happen:</p>
+
+<ul>
+<li>Look up the order of your on-call schedule (<code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, <code>f</code>, <code>a</code> &hellip;)</li>
+<li>Cycle it off by half a phase, we&rsquo;ll use this later (<code>d</code>, <code>e</code>, <code>f</code>, <code>a</code>, <code>b,</code> <code>c,</code> <code>d</code>&hellip;)</li>
+<li>Edit the on-call schedule to create a <a href="https://support.pagerduty.com/docs/schedules#section-scheduling-layers">second layer</a> for weekends:
+
+<ul>
+<li>Restrict that layer to Fri @ noon - Mon @ noon</li>
+<li>Add users from the order in the second step</li>
+<li>Make sure the effective-on date of the second layer and the first layer are the same</li>
+</ul></li>
+</ul>
+
+<p><em>It would be <a href="https://tickets.pagerduty.com/hc/en-us/requests/new">great if Pagerduty had configuration</a> recipes to manage nuanced schedule layering like this.</em></p>
+
+<p>Should you try this out, please let me know how it goes.</p>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  
+
+
+<footer class="site-footer">
+  <p>© 2017-2018 Rock Solid Engineering</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

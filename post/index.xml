@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Rock Solid Engineering</title>
+    <link>http://shalecraig.github.io/post/</link>
+    <description>Recent content in Posts on Rock Solid Engineering</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://shalecraig.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On-Call</title>
+      <link>http://shalecraig.github.io/post/2018-12-15-on-call/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2018-12-15-on-call/</guid>
+      <description>I really liked Henrik&amp;rsquo;s blog post about on-call. Many of the points ring true with my experience over the years.
+I&amp;rsquo;ve learnt something about scheduling on-call shifts over the past 18 months which leads to meaningful improvements work-life balance, and wanted to pass the idea on.
+Long rotations are filled with compromises:
+Compared to smaller time slices, trading a week is inherently harder. Because it&amp;rsquo;s larger amount of time, others are more likely to have conflicts with the week you’re trying to get out of.</description>
+    </item>
+    
+    <item>
+      <title>Valedictorian Speech at Convocation</title>
+      <link>http://shalecraig.github.io/post/2015-06-18-valedictorian/</link>
+      <pubDate>Fri, 12 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2015-06-18-valedictorian/</guid>
+      <description>I was honoured to be the 2015 Valedictorian for Mathematics convocation at the University of Waterloo.
+Here&amp;rsquo;s the script of my speech:
+ Mr. Chancellor, members of convocation, fellow graduates, ladies, gentlemen, and beloved geese.
+My friends, we&amp;rsquo;ve made it to the top. To quote a prominent Canadian musician named Drake: &amp;ldquo;We started from the bottom now we&amp;rsquo;re here&amp;rdquo;.
+I think you&amp;rsquo;ll all agree - getting through this school has been a pretty very transformative journey.</description>
+    </item>
+    
+    <item>
+      <title>Eurocycle</title>
+      <link>http://shalecraig.github.io/post/2015-05-01-eurocycle/</link>
+      <pubDate>Fri, 01 May 2015 03:39:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2015-05-01-eurocycle/</guid>
+      <description>I&amp;rsquo;m about to head out on a cycling tour from London to Berlin.
+If you want to hang out, feel free to send me a message.
+I&amp;rsquo;ll be in these places on these dates:
+ May 1: home ✈ LHR May 2: London, UK -&amp;gt; Ashford, UK May 3: Ashford, UK -&amp;gt; Dunkirk, France May 4: Dunkirk, France -&amp;gt; Bruges, Belgium May 5: Bruges, Belgium May 6: Bruges, Belgium -&amp;gt; Burgh-Haamstede, Netherlands May 7 Burgh-Haamstede, Netherlands -&amp;gt; The Hague, Netherlands May 8: The Hague, Netherlands -&amp;gt; Amsterdam, Netherlands May 9-10: Amsterdam, Netherlands May 11: Amsterdam, Netherlands -&amp;gt; Apeldoorn, Netherlands May 12: Apeldoorn, Netherlands -&amp;gt; Enschede, Netherlands May 13: Enschede, Netherlands -&amp;gt; Bramsche, Germany May 14: Bramsche, Germany -&amp;gt; Minden, Germany May 15: Minden, Germany -&amp;gt; Hannover, Germany May 16: Hanover, Germany -&amp;gt; Brunswick, Germany May 17: Brunswick, Germany -&amp;gt; Magdeburg, Germany May 18: Magdeburg, Germany -&amp;gt; Brandenburg, Germany May 19: Brandenburg, Germany -&amp;gt; Berlin, Germany May 20, 21: Berlin May 22-28: Unscheduled.</description>
+    </item>
+    
+    <item>
+      <title>Maven Github Repo</title>
+      <link>http://shalecraig.github.io/post/2015-04-19-maven-helper-repo/</link>
+      <pubDate>Sun, 19 Apr 2015 03:39:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2015-04-19-maven-helper-repo/</guid>
+      <description>I created a new Github Repo, titled &amp;ldquo;maven helper scripts.&amp;rdquo;
+The impetus is that maven&amp;rsquo;s a pretty unwieldy tool to use from the command-line, and every so often I want to create a new project. Almost every time that I create a new project, I need to look up the commands, which is silly.</description>
+    </item>
+    
+    <item>
+      <title>Scala config for IntelliJ</title>
+      <link>http://shalecraig.github.io/post/2014-04-06-scala-config-for-intellij/</link>
+      <pubDate>Sun, 06 Apr 2014 00:27:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2014-04-06-scala-config-for-intellij/</guid>
+      <description>I was trying to get Scala setup with Intellij, and noticed that it was asking me about the Scala home directory.
+For Scala installed using homebrew&amp;rsquo;s brew install scala command, homebrew outputs a nice message when brew info scala is run:
+$ brew info scala .... ==&amp;gt; Caveats To use with IntelliJ, set the Scala home to: /usr/local/opt/scala/idea  I was surprised, and figured I&amp;rsquo;d post it.</description>
+    </item>
+    
+    <item>
+      <title>Learning To Code</title>
+      <link>http://shalecraig.github.io/post/2013-10-25-learning-to-code/</link>
+      <pubDate>Fri, 25 Oct 2013 22:09:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2013-10-25-learning-to-code/</guid>
+      <description>From time to time, I like to play around with a new programming languages.
+I&amp;rsquo;ve designed a few generic exercises for experienced programmers to give them a feel on how these languages work.
+You&amp;rsquo;ll walk away having implemented a Genetic Algorithm in this language - all in the span of about four hours.
+Exercises:  &amp;lsquo;Hello World&amp;rsquo; - the archetypal program that starts it all. Since code examples can typically be found online, this is just to ensure the environment is setup correctly.</description>
+    </item>
+    
+    <item>
+      <title>Hard Questions</title>
+      <link>http://shalecraig.github.io/post/2013-09-18-hard-questions/</link>
+      <pubDate>Wed, 18 Sep 2013 12:00:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2013-09-18-hard-questions/</guid>
+      <description>I&amp;rsquo;ve been coming up with a bunch of hard questions that I don&amp;rsquo;t know the answer to. Not all of them will have precise answers.
+Consider this a WIP.
+Questions  It&amp;rsquo;s generally acknowledged that technology removes jobs. What do we see in our economy as the effect of this? In other words, is the devaluation of undergrad degrees a symptom of this phenomenon?
+ How does one develop knowledge?</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi As a Home Base</title>
+      <link>http://shalecraig.github.io/post/2013-09-03-raspberry-pi-as-a-home-base/</link>
+      <pubDate>Tue, 03 Sep 2013 16:37:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2013-09-03-raspberry-pi-as-a-home-base/</guid>
+      <description>I bought a Raspberry Pi the other day to set it up as a Wifi Access Point. I had a bit of trouble setting up, so I decided to document what I was doing in case I need to do it again.
+Feel free to let me know about any issues/etc in the comments, or on twitter.
+Consider this a WIP.
+A false start Started by buying this USB Wireless LAN adapter.</description>
+    </item>
+    
+    <item>
+      <title>5 Services I Bound together to Replace Google Reader</title>
+      <link>http://shalecraig.github.io/post/2013-07-14-n-services-i-use-to-offset-google-reader-closure/</link>
+      <pubDate>Sun, 14 Jul 2013 15:55:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2013-07-14-n-services-i-use-to-offset-google-reader-closure/</guid>
+      <description>With much of the fanfare of Google Reader shutting down, I recently realized I inadvertently braced against it closing by relying on a bunch of services wrapped together using If This Then That (IFTTT).
+Here&amp;rsquo;s my setup:
+ All my primary blog/article reading is done inside Readability. They clean up the articles the way I like, and preserve a list of the articles I input. My favourite/the best articles are starred.</description>
+    </item>
+    
+    <item>
+      <title>Some Thoughts on the Olympics and Curiosity</title>
+      <link>http://shalecraig.github.io/post/2012-08-09-some-thoughts-on-the-olympics-and-curiosity/</link>
+      <pubDate>Thu, 09 Aug 2012 03:39:00 +0000</pubDate>
+      
+      <guid>http://shalecraig.github.io/post/2012-08-09-some-thoughts-on-the-olympics-and-curiosity/</guid>
+      <description>NASA didn&amp;rsquo;t delay the Curiosity landing because they realized that the world doesn&amp;rsquo;t live for Primetime.
+Total cost of Curiosity: 2.5 Billion USD [1] Total cost to London for the 2012 Olympics: 14.5 Billion USD [2]  America&amp;rsquo;s spending budget for the Curiosity rover is approximately one sixth of what London has spent on the entire Olympics.
+[1] : Space News
+[2] : Vanity Fair</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Raspberry Pi As a Home Base</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  <meta name="description" content="I bought a Raspberry Pi the other day to set it up as a Wifi Access Point. I had a bit of trouble setting up, so I decided to document what I was doing in case I need to do it again.
+Feel free to let me know about any issues/etc in the comments, or on twitter.
+Consider this a WIP.
+A false start Started by buying this USB Wireless LAN adapter.">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="Raspberry Pi As a Home Base">
+    <meta name="twitter:description" content="I bought a Raspberry Pi the other day to set it up as a Wifi Access Point. I had a bit of trouble setting up, so I decided to document what I was doing in case I need to do it again.
+Feel free to let me know about any issues/etc in the comments, or on twitter.
+Consider this a WIP.
+A false start Started by buying this USB Wireless LAN adapter.">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Raspberry Pi As a Home Base">
+  <meta property="og:description" content="I bought a Raspberry Pi the other day to set it up as a Wifi Access Point. I had a bit of trouble setting up, so I decided to document what I was doing in case I need to do it again.
+Feel free to let me know about any issues/etc in the comments, or on twitter.
+Consider this a WIP.
+A false start Started by buying this USB Wireless LAN adapter.">
+  <meta property="og:url" content="http://shalecraig.github.io/post/2013-09-03-raspberry-pi-as-a-home-base/">
+  <meta property="og:image" content="/images/avatar.jpg">
+
+
+
+
+<meta name="generator" content="Hugo 0.52">
+
+
+<link rel="canonical" href="http://shalecraig.github.io/post/2013-09-03-raspberry-pi-as-a-home-base/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rock Solid Engineering">
+<meta name="msapplication-tooltip" content="Rock Solid Engineering">
+<meta name='msapplication-navbutton-color' content="#5fbf5e">
+<meta name="msapplication-TileColor" content="#5fbf5e">
+<meta name="msapplication-TileImage" content="/images/tile-image-windows.png">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" sizes="192x192" href="/images/touch-icon-android.png">
+<link rel="apple-touch-icon" href="/images/touch-icon-apple.png">
+
+
+<link rel="preload" href="/styles/main.min.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/avatar.jpg" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/images/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">Rock Solid Engineering</h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Raspberry Pi As a Home Base</h1>
+      <p class="post-meta">@ · Sep 3, 2013 · 9 min read</p>
+    </header>
+    <article class="post-content">
+
+<p>I bought a Raspberry Pi the other day to set it up as a Wifi Access Point.
+I had a bit of trouble setting up, so I decided to document what I was doing in case I need to do it again.</p>
+
+<p>Feel free to let me know about any issues/etc in the comments, or <a href="https://twitter.com/shalecraig">on twitter</a>.</p>
+
+<p>Consider this a WIP.</p>
+
+<h2 id="a-false-start">A false start</h2>
+
+<p>Started by buying <a href="http://www.amazon.com/gp/product/B008Z9IZSW/ref=oh_details_o00_s00_i00?ie=UTF8&amp;psc=1">this USB Wireless LAN adapter</a>.</p>
+
+<p>The chipset is reported to be a Ralink RT5370, but when you plug it in, it&rsquo;s actually a Ralink RT2870/RT3070. Skip to the next part if you don&rsquo;t care about my false start.</p>
+
+<p>I&rsquo;ve basically followed the tutorial on <a href="http://sirlagz.net/2012/08/09/how-to-use-the-raspberry-pi-as-a-wireless-access-pointrouter-part-1/">sirlagz&rsquo;s site</a>.</p>
+
+<ul>
+<li>Load &amp; boot Raspbian. I used <a href="http://elinux.org/RPi_Easy_SD_Card_Setup#Using_command_line_tools_.281.29">this tutorial</a>.</li>
+<li>Update installed packages:</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+$ sudo apt-get upgrade
+$ sudo reboot
+</code></pre>
+
+<ul>
+<li>Install required packages:</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt-get install iw hostapd
+</code></pre>
+
+<ul>
+<li>Check that the wireless device is found:</li>
+</ul>
+
+<pre><code class="language-bash">$ lsusb | grep Ralink
+Bus 001 Device 006: ID 148f:3070 Ralink Technology, Corp. RT2870/RT3070 Wireless Adapter
+</code></pre>
+
+<p>Well, it looks like the device I bought was not the one advertised on the Amazon page. I went to Amazon for a refund, and got my money back.</p>
+
+<h3 id="set-up-the-raspberry-pi-while-i-wait-for-a-new-beginning-to-be-unblocked-tomorrow">Set Up The Raspberry Pi While I Wait For &ldquo;A New Beginning&rdquo; to be Unblocked (Tomorrow)</h3>
+
+<p>I&rsquo;m going to try to set up the first wifi adapter to connect to wireless networks.</p>
+
+<p>After following the modification instructions on <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?p=361671">this raspberrypi.org forum post</a>,
+I ran <code>dmesg</code> and saw the error:</p>
+
+<pre><code>[   45.793616] phy0 -&gt; rt2800_init_eeprom: Error - Invalid RF chipset 0x3070 detected.
+</code></pre>
+
+<p>According to <a href="http://www.geekamole.com/2013/rt2800usb-fix-for-ralinkmediatek-3070-gentoo-linux/">this page</a>,
+I <em>just</em> need to compile the kernel. That&rsquo;s great, because a quick trip to <a href="http://elinux.org/RPi_Kernel_Compilation">elinux.org</a> later, and
+I&rsquo;m ready to start compiling!</p>
+
+<p>Wow, compiling is hard. I ran into the error below, and decided to go a different route.
+More on that below the error.</p>
+
+<pre><code class="language-bash">$ make mrproper
+Makefile:323: /home/pi/kernel/src/linux/scripts/Kbuild.include: No such file or directory
+/bin/bash: /home/pi/kernel/src/linux/scripts/gcc-goto.sh: No such file or directory
+make[1]: scripts/Makefile.clean: No such file or directory
+make[1]: *** No rule to make target `scripts/Makefile.clean'.  Stop.
+make: *** [_clean_.] Error 2
+</code></pre>
+
+<p>Found a <a href="http://lizquilty.com/2010/06/08/getting-the-rt3070-usb-wifi-adapter-working-in-linux/">blog post</a> by <a href="http://lizquilty.com/">Liz Quilty</a>.
+Seems simple enough.</p>
+
+<p>Downloaded the driver <a href="http://download.modem-help.co.uk/mfcs-R/Ralink/Reference-Designs/RT3000U/Drivers/Linux-k2-4/v2-3-0-2/DPO-RT3070-LinuxSTA-V2.3.0.2-20100412.bz2.php">from here</a>.
+This isn&rsquo;t sketchy at all.</p>
+
+<p>Holy crap, my SD card is full. I should probably delete the 2 gig raspbian OS I put on there earlier. <code>rm -rf ~/kernel</code> Done.</p>
+
+<p>After a bit of frantic googling, I was able to find <a href="http://androideia.wordpress.com/2013/07/20/problemas-com-adaptador-usb-wi-fi-ralink-2870-3070-em-raspberry-pi-e-linux/">this ko file</a>, and installed it on my system.
+After a reboot, and replugging in the usb, this is what I found:</p>
+
+<pre><code class="language-bash">$ dmesg
+{...}
+[   61.794219] usb 1-1.3.2: new high-speed USB device number 7 using dwc_otg
+[   61.912143] usb 1-1.3.2: New USB device found, idVendor=148f, idProduct=3070
+[   61.912173] usb 1-1.3.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   61.912191] usb 1-1.3.2: Product: 802.11 n WLAN
+[   61.912205] usb 1-1.3.2: Manufacturer: Ralink
+[   61.912218] usb 1-1.3.2: SerialNumber: 1.0
+</code></pre>
+
+<p>Running <code>iw list</code> returns <code>nl80211 not found.</code></p>
+
+<p>According to <a href="https://github.com/raspberrypi/linux/pull/321">this pull request on the rpi github repo</a>, someone&rsquo;s fixed it already but it isn&rsquo;t in master yet.
+Now all I need to do is to check out the branch, cherry-pick the change, and compile the kernel. <strong>No biggie</strong>.</p>
+
+<p>Heading back to the <a href="http://elinux.org/RPi_Kernel_Compilation#Cross_compiling_from_OSX">elinux</a> page, I notice that I can try cross-compiling rpi on OS X; let&rsquo;s do that instead.</p>
+
+<pre><code class="language-bash"># On my mac:
+mkdir -p ~code/rpi
+cd ~code/rpi
+git init
+git fetch git://github.com/raspberrypi/linux.git rpi-3.6.y:refs/remotes/origin/rpi-3.6.y
+git checkout rpi-3.6.y
+sudo port install arm-none-eabi-gcc
+sudo port install arm-none-eabi-binutils
+</code></pre>
+
+<p>Now that it&rsquo;s setup, let&rsquo;s do this for real:</p>
+
+<pre><code class="language-bash">make mrproper
+</code></pre>
+
+<p>Hmm, it&rsquo;s failing because <code>elf.h</code> is missing.
+According to the elinux site, I can get it from the apple developer site.</p>
+
+<!-- TODO: add curl here -->
+
+<p>Now that it&rsquo;s setup, let&rsquo;s do this for real:</p>
+
+<pre><code class="language-bash">make mrproper
+</code></pre>
+
+<p>Hmm, it&rsquo;s failing with the error message below.</p>
+
+<pre><code class="language-bash">net/ipv4/netfilter/ipt_ECN.c:29:46: warning: ‘struct ipt_ECN_info’ declared inside parameter list [enabled by default]
+{snip ... 41 lines}
+make[3]: *** [net/ipv4/netfilter/ipt_ECN.o] Error 1
+make[2]: *** [net/ipv4/netfilter] Error 2
+make[1]: *** [net/ipv4] Error 2
+make: *** [net] Error 2
+</code></pre>
+
+<p>A quick google search lets me know that the file system that I&rsquo;m using is case-insensitive.
+Setting up a linux dev env on a usb stick:</p>
+
+<p><strong>Note: I used Disk Utility to setup this external usb disk. You can create your own image, but I was lazy</strong></p>
+
+<pre><code class="language-bash">cd ~code/rpi
+cp -r . /Volumes/LINUX_DEV/
+make ARCH=arm CROSS_COMPILE=${CCPREFIX}
+</code></pre>
+
+<p>After a <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?t=43553&amp;p=366029">few</a> compilation errors, I ran into this error:</p>
+
+<pre><code class="language-bash">net/ipv4/netfilter/ipt_ECN.c:20:42: fatal error: linux/netfilter_ipv4/ipt_ECN.h: No such file or directory
+compilation terminated.
+make[3]: *** [net/ipv4/netfilter/ipt_ECN.o] Error 1
+make[2]: *** [net/ipv4/netfilter] Error 2
+make[1]: *** [net/ipv4] Error 2
+make: *** [net] Error 2
+</code></pre>
+
+<p>According to <a href="http://ubuntuforums.org/archive/index.php/t-623874.html">this blog</a>, I need to have <code>gcc 4.1</code> installed.
+After running <code>gcc --version</code>, it looks like I&rsquo;m running <code>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1</code>.</p>
+
+<p>At this point, I have to go to a friends house for dinner, and I don&rsquo;t feel like installing gcc 4.1 when I have a functioning gcc 4.2 installed.</p>
+
+<h3 id="after-dinner">After Dinner</h3>
+
+<p>My friend&rsquo;s father was talking all about how he has <a href="http://openelec.tv/">OpenELEC</a> installed on his rpi, and about how it&rsquo;s been working flawlessly.
+Unlike <a href="https://github.com/raspberrypi/linux/pull/321">the Raspberry pi kernel</a>, I believe that OpenELEC <a href="https://github.com/OpenELEC/OpenELEC.tv/issues/2435">already supports</a> my Ralink 3070 adapter.</p>
+
+<p>New plan of action: <strong>Boot my Raspberry pi using OpenELEC</strong></p>
+
+<ul>
+<li>Downloaded the <a href="http://openelec.thestateofme.com/">OpenELEC.img</a></li>
+<li><a href="http://wiki.openelec.tv/index.php?title=Installing_OpenELEC_on_Raspberry_Pi#tab=Mac_OSX">Used <code>dd</code></a> to load it on the SD card.</li>
+<li>Put the SD card into the Raspberry Pi.</li>
+<li>Boot it.</li>
+</ul>
+
+<p>It looks like OpenELEC <a href="http://openelec.tv/forum/64-installation/36491-raspberry-pi">is read-only</a> :(.
+Going to try RaspBMC instead.</p>
+
+<ul>
+<li>Following the tutorial on <a href="http://www.raspbmc.com/wiki/user/os-x-linux-installation/">this page</a>.</li>
+<li>After I booted RaspBMC, it looks like it doesn&rsquo;t support the RT3070 I have.</li>
+</ul>
+
+<p>I&rsquo;m going to submit a pull request to include it in Raspbian, my OS of choice.</p>
+
+<p>As of right now, I&rsquo;m waiting on the pull request to be merged.</p>
+
+<h2 id="a-new-beginning">A New Beginning</h2>
+
+<p>I got started by buying <a href="http://www.amazon.ca/gp/product/B008IFXQFU/ref=oh_details_o00_s00_i00?ie=UTF8&amp;psc=1">this USB Wireless LAN adapter</a>, and it hasn&rsquo;t come yet.</p>
+
+<p>I&rsquo;m going to follow the instructions on a <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=26&amp;t=49355">raspberrypi.org forum post</a> to get it working.</p>
+
+<p>It arrived a few days ago, and I&rsquo;m set to start!</p>
+
+<ul>
+<li>Install/Boot Raspbian</li>
+<li>After the initial setup, plugging in the wifi adapter caused the Raspberry Pi to reboot. I&rsquo;m cautious to see that it&rsquo;s underpowered, and will probably watch for that happening in the future.</li>
+<li>SSH in, update installed packages:</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt-get update
+E: Unable to parse package file /var/lib/dpkg/status (1)
+E: The package lists or status file could not be parsed or opened.
+</code></pre>
+
+<ul>
+<li>Quick google search let me know that something is corrupted, and that I should probably re-image the card.</li>
+</ul>
+
+<pre><code class="language-bash">sudo dd bs=1m if=~/Downloads/2013-07-26-wheezy-raspbian.img of=/dev/disk1
+</code></pre>
+
+<ul>
+<li>Hop back on the pi machine:</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+$ sudo apt-get upgrade
+$ sudo raspi-config
+$ sudo reboot
+</code></pre>
+
+<ul>
+<li>Install required packages:</li>
+</ul>
+
+<pre><code class="language-bash">$ sudo apt-get install iw hostapd
+</code></pre>
+
+<ul>
+<li>In the output, I noticed that I haven&rsquo;t set up a locale. I should probably do that: <!-- TODO: do this --></li>
+</ul>
+
+<pre><code class="language-bash">perl: warning: Please check that your locale settings:
+    LANGUAGE = (unset),
+    LC_ALL = (unset),
+    LC_CTYPE = &quot;en_CA.UTF-8&quot;,
+    LANG = &quot;en_GB.UTF-8&quot;
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale (&quot;C&quot;).
+</code></pre>
+
+<ul>
+<li>I need to install the new version of the driver:</li>
+</ul>
+
+<pre><code class="language-bash">mkdir wifiDriver
+cd wifiDriver
+wget https://dl.dropboxusercontent.com/u/80256631/8188eu-20130209.tar.gz
+tar -zxvf 8188eu-20130209.tar.gz
+sudo install -p -m 644 8188eu.ko /lib/modules/`uname -r`/kernel/drivers/net/wireless
+sudo depmod -a
+sudo modprobe 8188eu
+</code></pre>
+
+<ul>
+<li>The <code>modprobe 8188eu</code> command errored out with the error below, so I followed the steps <a href="http://tech.enekochan.com/2013/05/29/compile-and-install-driver-for-tp-link-tl-wn725n-version-2-in-raspbian/">here</a>.</li>
+</ul>
+
+<pre><code class="language-bash">$ git clone https://github.com/liwei/rpi-rtl8188eu.git
+$ git clone --depth 1 git://github.com/raspberrypi/linux.git rpi-linux
+$ git clone --depth 1 git://github.com/raspberrypi/firmware.git rpi-firmware
+$ cd rpi-linux
+$ make mrproper
+$ zcat /proc/config.gz &gt; .config
+$ make modules_prepare
+$ cp ../rpi-firmware/extra/Module.symvers .
+$ cd ../rpi-rtl8188eu
+$ CONFIG_RTL8188EU=m make -C ../rpi-linux M=`pwd`
+$ sudo rmmod 8188eu
+&gt; Error: Module 8188eu is not currently loaded
+$ sudo install -p -m 644 8188eu.ko /lib/modules/`uname -r`/kernel/drivers/net/wireless # next
+$ sudo depmod -a
+$ sudo modprobe 8188eu
+</code></pre>
+
+<p>It failed :(</p>
+
+<pre><code class="language-bash">ERROR: could not insert '8188eu': Exec format error
+</code></pre>
+
+<p>After this, I was a bit discouraged, and school was about to start again.
+I posted something to the effect of &ldquo;please merge this&rdquo; to that <a href="https://github.com/raspberrypi/linux/pull/321">github pull request</a>, and it (miraculously) was merged.</p>
+
+<p><a href="https://github.com/popcornmix">PopcornMix</a>, the maintainer (I think) mentioned that if I ran <code>rpi-update</code>, I&rsquo;d be able to test &amp; verify that it worked.</p>
+
+<p>It didn&rsquo;t.</p>
+
+<p>After a bit of investigation when I moved into my room at school on Monday, I established that <a href="https://github.com/Hexxeh">Hexxeh</a>&rsquo;s <code>rpi-update</code> repo was compiled on a schedule.
+School was starting (This was Sept 7th), so I decided to wait.</p>
+
+<h2 id="it-works">It works!</h2>
+
+<p>On Sept 13th, I finally got my adapter to be recognized by the system.
+I ran <code>rpi-update</code> and after rebooting it recognized the driver.</p>
+
+<pre><code class="language-bash">$ iw list
+&gt; ...[returns a lot]
+</code></pre>
+
+<p>:D</p>
+
+<p>Next step: see if I can set it up to be an access point.
+I&rsquo;m almost sure that nobody has set this up with this chip on a raspberry pi before.
+This is awesome.</p>
+
+<p>Here are the steps that I&rsquo;ve taken, from a clean install:</p>
+
+<pre><code class="language-bash"># Expand the file system
+$ sudo apt-get install iw
+$ iw list # verify the wifi dongle is not found.
+$ sudo rpi-update BRANCH=next # The driver is supported only on the `next` branch.
+$ sudo reboot # reboot to actually install the update
+$ iw list # check that the device is seen
+$ sudo reboot
+$ iw list # check that the device is seen - I ran into an issue where the update was `undone` after a reboot.
+$ ifconfig -a # check that the usb adapter is there, it should be listed as `wlan0` if you only have one wifi adapter
+$ sudo apt-get install ca-certificates dnsmasq hostapd iptables isc-dhcp-server iw udhcpd vim
+</code></pre>
+
+<p>I&rsquo;m not running <code>sudo apt-get upgrade</code> because that will update Raspberry Pi to the stable (non-&lsquo;next branch&rsquo;) version.
+See <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=28&amp;t=55576&amp;p=421733">this post</a> for more details if you&rsquo;re curious.</p>
+
+<p>After getting everything set up, I followed the <a href="http://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/overview">wonderful Adafruit tutorial</a> on setting up my Raspberry Pi as an Access point.</p>
+
+<p>The only points I needed to change were:</p>
+
+<ul>
+<li>I used <code>driver=nl80211</code> in my <code>hostapd.conf</code> file. I&rsquo;m not sure how to determine which one works, but this is what I used.</li>
+</ul>
+
+<p>-</p>
+
+<h2 id="plan">Plan:</h2>
+
+<p>I want to see if I can do all of these at the same time:</p>
+
+<ul>
+<li><p>Use as a wifi Access Point</p></li>
+
+<li><p>Setup a local DNS server on the Raspberry Pi</p></li>
+
+<li><p>Samba file server</p></li>
+
+<li><p>Mac Address filtering/logging - when am I home/etc?</p></li>
+
+<li><p>Airplay &ldquo;destination&rdquo; - I should be able to play music through speakers hooked up to it</p></li>
+
+<li><p>Block ads on my access point.</p></li>
+</ul>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        This post was published <strong>1929</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  
+
+
+<footer class="site-footer">
+  <p>© 2017-2018 Rock Solid Engineering</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

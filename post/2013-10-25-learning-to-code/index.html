@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Learning To Code</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  <meta name="description" content="From time to time, I like to play around with a new programming languages.
+I&amp;rsquo;ve designed a few generic exercises for experienced programmers to give them a feel on how these languages work.
+You&amp;rsquo;ll walk away having implemented a Genetic Algorithm in this language - all in the span of about four hours.
+Exercises:  &amp;lsquo;Hello World&amp;rsquo; - the archetypal program that starts it all. Since code examples can typically be found online, this is just to ensure the environment is setup correctly.">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="Learning To Code">
+    <meta name="twitter:description" content="From time to time, I like to play around with a new programming languages.
+I&amp;rsquo;ve designed a few generic exercises for experienced programmers to give them a feel on how these languages work.
+You&amp;rsquo;ll walk away having implemented a Genetic Algorithm in this language - all in the span of about four hours.
+Exercises:  &amp;lsquo;Hello World&amp;rsquo; - the archetypal program that starts it all. Since code examples can typically be found online, this is just to ensure the environment is setup correctly.">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Learning To Code">
+  <meta property="og:description" content="From time to time, I like to play around with a new programming languages.
+I&amp;rsquo;ve designed a few generic exercises for experienced programmers to give them a feel on how these languages work.
+You&amp;rsquo;ll walk away having implemented a Genetic Algorithm in this language - all in the span of about four hours.
+Exercises:  &amp;lsquo;Hello World&amp;rsquo; - the archetypal program that starts it all. Since code examples can typically be found online, this is just to ensure the environment is setup correctly.">
+  <meta property="og:url" content="http://shalecraig.github.io/post/2013-10-25-learning-to-code/">
+  <meta property="og:image" content="/images/avatar.jpg">
+
+
+
+
+<meta name="generator" content="Hugo 0.52">
+
+
+<link rel="canonical" href="http://shalecraig.github.io/post/2013-10-25-learning-to-code/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rock Solid Engineering">
+<meta name="msapplication-tooltip" content="Rock Solid Engineering">
+<meta name='msapplication-navbutton-color' content="#5fbf5e">
+<meta name="msapplication-TileColor" content="#5fbf5e">
+<meta name="msapplication-TileImage" content="/images/tile-image-windows.png">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" sizes="192x192" href="/images/touch-icon-android.png">
+<link rel="apple-touch-icon" href="/images/touch-icon-apple.png">
+
+
+<link rel="preload" href="/styles/main.min.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/avatar.jpg" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/images/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">Rock Solid Engineering</h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Learning To Code</h1>
+      <p class="post-meta">@ · Oct 25, 2013 · 3 min read</p>
+    </header>
+    <article class="post-content">
+
+<p>From time to time, I like to play around with a new programming languages.</p>
+
+<p>I&rsquo;ve designed a few generic exercises for experienced programmers to give them a feel on how these languages work.</p>
+
+<p>You&rsquo;ll walk away having implemented a Genetic Algorithm in this language - all in the span of about four hours.</p>
+
+<h3 id="exercises">Exercises:</h3>
+
+<ol>
+<li><p>&lsquo;Hello World&rsquo; - the archetypal program that starts it all.
+Since code examples can typically be found online, this is just to ensure the environment is setup correctly.</p></li>
+
+<li><p>&lsquo;Hello USER&rsquo; - ask the user for their name, then respond with &ldquo;Hello $NAME&rdquo;.
+I like this exercise because it teaches about user input and variables, in a similar context to the Hello World program.</p></li>
+
+<li><p>&lsquo;Guess the Number&rsquo; game - write a program that answers &ldquo;higher&rdquo; or &ldquo;lower&rdquo; until the user guesses the correct number.
+I like this because it uses the concept of user input to teach users about control flow.
+I don&rsquo;t like this because it distracts learning the language with string parsing.
+If the number is chosen randomly, we get to learn how that works too.</p></li>
+
+<li><p>&lsquo;<a href="https://en.wikipedia.org/wiki/Median_of_medians">Median of Medians</a>&rsquo; algorithm - ask the user for a set of numbers, and return the median.
+Since the problem space size isn&rsquo;t configured while defining the problem, this exercise teaches how the language dynamically allocates memory, and how the language deals with arrays.</p></li>
+
+<li><p>&lsquo;<a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> Library&rsquo; - design and write a library that computes the Levenshtein<sup class="footnote-ref" id="fnref:Levenshtein"><a href="#fn:Levenshtein">1</a></sup> distance between two strings.
+The &ldquo;optimal&rdquo; implementation of the algorithm uses arrays - a concept from the previous exercise.
+This accomplishes two things:</p>
+
+<ol>
+<li>This teaches the user about Library design in this language.</li>
+<li>It&rsquo;s easy to get this wrong, which makes it a great opportunity to learn about debugging in this language.</li>
+</ol></li>
+
+<li><p>&lsquo;<a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic Algorithm</a>&rsquo; - starting from a random initial generation of strings, continue through successive generations until the string &lsquo;hello world&rsquo; evolves.
+With the fitness function of an individual <code>X</code> as <code>LevenshteinDistance(X, 'Hello World')</code>, we can use the library we&rsquo;ve written.
+Now all we need to implement is mutation and crossover - both of which are string parsing.
+If the language is object-oriented, the <code>Individual</code> object is an awesome place to learn about how that feels.
+This milestone is pretty awesome, since suddenly you&rsquo;ve built something reasonable.</p></li>
+
+<li><p>&lsquo;<a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure#Disjoint-set_forests">Union Find</a>&rsquo; - implement the fast union find data structure.</p></li>
+</ol>
+
+<p>Between the first and last &lsquo;hello world&rsquo;, this is a great introduction to a language.</p>
+
+<hr />
+
+<p>Let me know if you have any suggestions for other things frequently used.
+I know I don&rsquo;t deal with OOP, but there are others I&rsquo;ve missed too.</p>
+
+<hr />
+
+<p>Footnotes:</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:Levenshtein">Funnily enough, my Sublime Text wants to convert Levenshtein to Liechtenstein.
+ <a class="footnote-return" href="#fnref:Levenshtein"><sup>[return]</sup></a></li>
+</ol>
+</div>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        This post was published <strong>1876</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  
+
+
+<footer class="site-footer">
+  <p>© 2017-2018 Rock Solid Engineering</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
